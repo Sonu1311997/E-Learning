@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring boot email template with Thymeleaf</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <style>
+		.btn {
+		  border: 2px solid black;
+		  background-color: white;
+		  color: black;
+		  padding: 14px 28px;
+		  font-size: 20px;
+		  cursor: pointer;
+		}
+			
+			.bg-img {
+			  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwD4VzVjTF_vg7noap8NjC9an7_odnVu86RA&usqp=CAU");
+			  height:660px;
+			  min-width:1520px;
+			  margin:auto;
+			  background-position: center;
+			  background-attachment: fixed;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			}
+			
+			/* Add styles to the form container */
+			.container {
+			  position: absolute;
+			  right: 0;
+			  margin: 0%;
+			  max-width: 500px;
+			  padding: 25px;
+			}
+			
+			/* Set a style for the submit button */
+			
+			.btn:hover {
+			  opacity: 1;
+			}
+
+		/* Green */
+		.success {
+		  border-color: #4CAF50;
+		  color: green;
+		  display:inline;
+		  font-family:Comic Sans MS;
+		  align:center
+		}
+		
+		.success:hover {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+		
+		/* Blue */
+		.info {
+		  border-color: #2196F3;
+		  color: dodgerblue;
+		  display:inline;
+		  font-family:Comic Sans MS;
+		}
+		
+		.info:hover {
+		  background: #2196F3;
+		  color: white;
+		}
+		
+		.p {
+	      font-family: Comic Sans MS;
+	      font-size: 25px;
+	      color: #000;
+	      font-weight: 500;
+    	}
+    	.vertical-center {
+		      margin: 0;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  -ms-transform: translate(-50%, -50%);
+			  transform: translate(-50%, -50%);
+			}
+			
+		.v-center {
+		      margin: 0;
+			  position: absolute;
+			  top: 65%;
+			  left: 52.5%;
+			  -ms-transform: translate(-70%, -70%);
+			  transform: translate(-70%, -70%);
+			}
+			
+		.ve-center {
+		      margin: 0;
+			  position: absolute;
+			  top: 80%;
+			  left: 54.5%;
+			  -ms-transform: translate(-90%, -90%);
+			  transform: translate(-90%, -90%);
+			}
+			
+		.s{
+			text-align:center;
+		}
+    	
+  </style>   
+
+
+</head>
+<body>
+
+<div class="container bg-img">
+
+    <div>
+        <h1 style="font-family: Stencil;font-size:70px;color:#000033;text-align:center" >AMDOCS E-LEARNING PORTAL </h1>
+
+    </div>
+
+    <div>
+        <form th:action="@{/user}">
+                <button type="submit" class="btn btn-primary success bg vertical-center">USER LOGIN</button>
+        </form>
+    </div>
+
+    <div>
+        <form th:action="@{/admin}">
+            <button type="submit" class="btn btn-primary info bg v-center" >ADMIN LOGIN</button>
+        </form>
+    </div>
+    
+    <div>
+        <form th:action="@{/contact}">
+            <button type="submit" class="btn btn-primary info bg ve-center" > CONTACT </button>
+        </form>
+    </div>
+    
+</div>
+</body>
+</html>
+
+
+
+
+
+

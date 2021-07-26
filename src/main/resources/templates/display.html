@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>all user records</title>
+</head>
+<body>
+<center>
+	<h1> USER RECORDS </h1><hr/>
+	<span th:text="${msg}"></span>
+	<table border="1" width="80%">
+	<tr>
+		<th> Id </th>
+		<th> Name </th>
+		<th> Phone Number </th>
+		<th> Email </th>
+		<th> Address </th>
+		<th> Registration Date </th>
+		<th> Password </th>
+		<th> Upload Photo </th>
+	</tr>
+	
+	<tr th:each="tab: ${data}">
+		<td th:text="${tab.id}" ></td>
+		<td th:text="${tab.name}" > </td>
+		<td th:text="${tab.phone_no}"> </td>
+		<td th:text="${tab.email}"> </td>
+		<td th:text="${tab.address}"> </td>
+		<td th:text="${tab.reg_date}"> </td>
+		<td th:password="${tab.password}"> </td>
+		<td th:text="${tab.upload_photo}"> </td>
+	</tr>
+	
+	</table>
+
+</center>
+	
+</body>
+</html>

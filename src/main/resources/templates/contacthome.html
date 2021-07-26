@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Details</title>
+</head>
+<body>
+	
+	 <div>
+        <form th:action="@{/insert2}">
+                <button type="submit" class="btn btn-primary success bg vertical-center">ADD CONTACT DETAILS</button>
+        </form>
+    </div>
+    <div>
+        <form th:action="@{/display2}">
+                <button type="submit" class="btn btn-primary success bg vertical-center">CONTACT RECORDS</button>
+        </form>
+    </div>
+    
+    <div>
+        <form th:action="@{/insert23}">
+                <button type="submit" class="btn btn-primary success bg vertical-center">UODATE RECORDS</button>
+        </form>
+    </div>
+      <div>
+        <form th:action="@{/insert2.1}">
+                <button type="submit" class="btn btn-primary success bg vertical-center">DELETE RECORDS</button>
+        </form>
+    </div>
+
+    
+	
+	
+</body>
+</html>
